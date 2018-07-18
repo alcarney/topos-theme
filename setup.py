@@ -10,17 +10,17 @@ setup(
     author_email="alcarneyme@gmail.com",
     description="Topos theme for sphinx",
     zip_safe=False,
-    packages=['topos-theme'],
-    package_data={'topos-theme': [
+    packages=['topos_theme'],
+    package_data={'topos_theme': [
         "theme.conf",
         "*.html",
-        "static/css/*.css"
+        "*.css"
     ]},
     include_package_data=True,
     # http://www.sphinx-doc.org/en/stable/theming.html#distribute-your-theme-as-a-python-package
     entry_points={
         "sphinx.html_themes": [
-            "topos-theme = topos-theme"
+            "topos-theme = topos_theme"
         ]
     },
     install_requires=["sphinx"],
