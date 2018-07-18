@@ -25,7 +25,9 @@ Topos Theme
     :alt: Supported versions
     :target: https://pypi.python.org/pypi/topos-theme
 
- :code:`topos-theme` is a documentation theme for `sphinx`_ that was originally
- developed for the `topos`_ python package extracted out into its own
- independent distribution.
+:code:`topos-theme` is a documentation theme for `sphinx`_ that was originally
+developed for the `topos`_ python package extracted out into its own
+independent distribution.
 
+.. _sphinx: http://www.sphinx-doc.org/en/master
+.. _topos: https://github.com/alcarney/topos
