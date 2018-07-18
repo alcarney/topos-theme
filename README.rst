@@ -29,5 +29,7 @@ Topos Theme
 developed for the `topos`_ python package extracted out into its own
 independent distribution.
 
+.. image:: img/screenshot.png
+
 .. _sphinx: http://www.sphinx-doc.org/en/master
 .. _topos: https://github.com/alcarney/topos
