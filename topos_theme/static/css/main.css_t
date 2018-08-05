@@ -42,13 +42,13 @@ body {
     }
 
     .footer {
-        border-top: 1px solid #e18a07;
+        border-top: 1px solid {{ theme_accent_color }};
     }
 
 }
 
 a {
-    color: #e18a07;
+    color: {{ theme_accent_color }};
     position: relative;
     text-decoration: none;
     transition: 0.3s ease-in-out 0s;
@@ -56,7 +56,7 @@ a {
 }
 
 a:before {
-    background-color: #e18a07;
+    background-color: {{ theme_accent_color }};
     bottom: 0;
     content: "";
     height: 2px;
@@ -81,7 +81,7 @@ a:hover:before {
 
 .header {
     background: white;
-    border-bottom: 1px solid #e18a07;
+    border-bottom: 1px solid {{ theme_accent_color }};
     grid-area: header;
 }
 
@@ -90,7 +90,7 @@ a:hover:before {
 }
 
 .header sub {
-    color: #e18a07;
+    color: {{ theme_accent_color }};
     font-size: 10pt;
     margin-left: 5px;
 }
@@ -134,7 +134,7 @@ a:hover:before {
 
 .section ul,
 .section ol,
-.highlight-pycon {
+.highlight {
     margin: 10px 20px;
 }
 
@@ -154,7 +154,7 @@ a:hover:before {
 .nav {
     grid-area: sidebar;
     background: white;
-    border-left: 1px solid #e18a07;
+    border-left: 1px solid {{ theme_accent_color }};
 }
 
 .nav ul {
@@ -196,7 +196,7 @@ a:hover:before {
 /* -- Admonitions -- */
 .admonition {
     border: 1px solid black;
-    border-left: 5px solid #e18a07;
+    border-left: 5px solid {{ theme_accent_color }};
     margin: 25px 20px;
 }
 
@@ -209,8 +209,6 @@ a:hover:before {
 .admonition .last {
     text-align: right;
 }
-
-.admonition.warning {}
 
 .admonition.error {
     border-left: 5px solid #cc0000;
@@ -238,6 +236,51 @@ dl.glossary dt {
     text-transform: capitalize;
 }
 
+/*-- Figures --*/
+div.figure {
+    margin: 20px;
+}
+
+div.figure img {
+    border: solid 1px #ddd;
+    padding: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p.caption {
+    margin: 0;
+    padding: 5px;
+    text-align: right;
+    font-size: 10pt;
+    font-style: italic;
+}
+
+/*-- Tables --*/
+table {
+    margin: 20px;
+    border-style: solid;
+    border-collapse: collapse;
+}
+
+thead {
+    border-bottom: solid 1px black;
+}
+
+tbody tr.row-odd {
+    border-top: solid 1px #ddd;
+    border-bottom: solid 1px #ddd;
+}
+
+tbody tr {
+    padding: 5px;
+}
+
+th, td {
+    border: none;
+}
+
 /*-- Autodoc --*/
 dl.class,
 dl.module,
@@ -261,7 +304,7 @@ dl.class dt {
 dl.function em,
 dl.class em {
     font-style: normal;
-    color: #e18a07;
+    color: {{ theme_accent_color }};
 }
 
 dl.function p,
@@ -271,17 +314,17 @@ dl.class p {
 
 dl.method > dt:before {
     content:"method ";
-    color: #e18a07;
+    color: {{ theme_accent_color }};
 }
 
 dl.attribute > dt:before {
     content:"attribute ";
-    color: #e18a07;
+    color: {{ theme_accent_color }};
 }
 
 dl.function > dt:before {
     content: "function ";
-    color: #e18a07;
+    color: {{ theme_accent_color }};
 }
 
 dl > dt > a {
@@ -303,4 +346,38 @@ tr.field {
     border-left: double 4px #666;
     margin: 20px;
     padding-left: 5px;
+}
+
+.highlight,
+.highlight {
+    padding-left: 5px;
+    border: 1px solid black;
+    border-left: 5px solid #5eba7d;
+    color: black;
+}
+
+.strike {
+    text-decoration: line-through;
+}
+
+/* -- With Line Numbers -- */
+
+table.highlighttable {
+    border: solid 1px black;
+    border-left: 5px solid #5eba7d;
+    width: 95%;
+}
+
+td.code div.highlight {
+    margin:0;
+    border: none;
+}
+
+td.linenos {
+    border-right: solid 1px #ddd;
+    text-align: center;
+}
+
+div.linenodiv {
+    margin-right: -5px;
 }
