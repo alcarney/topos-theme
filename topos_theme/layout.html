@@ -11,7 +11,16 @@
         <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" >
         <link rel="stylesheet" href="{{ pathto('_static/css/highlight.css', 1) }} " type="text/css" >
 
+        <script type="text/javascript" id="documentation_options"
+                data-url_root="{{ pathto('', 1) }}"
+                src="{{ pathto('_static/documentation_options.js', 1) }}"></script>
+        <script async
+                src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
+                type="application/javascript"></script>
+
         <title>{{ title | striptags }}</title>
+
+        {% block extra_head %}{% endblock %}
     </head>
     <body>
         <!-- Slightly modified from the basic theme in the Sphinx repository
@@ -51,6 +60,9 @@
             {%- block body %} {%- endblock %}
         </div>
         <div class="footer">
+
+            {% block extra_footer %}{% endblock %}
+
             {%- if last_updated %}
                 <p>Last updated on {{ last_updated }} </p>
             {%- endif %}

@@ -42,6 +42,8 @@ release = version
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    'sphinx.ext.todo',
+    'sphinx.ext.mathjax'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -68,9 +70,7 @@ language = None
 # This pattern also affects html_static_path and html_extra_path .
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
-# The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'sphinx'
-
+todo_include_todos = True
 
 # -- Options for HTML output -------------------------------------------------
 
