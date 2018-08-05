@@ -13,5 +13,6 @@ script:
 deploy:
     provider: pypi
     user: alcarney
+    skip_cleanup: true
     password:
         secure: "PAkWRXQrjEC8q4Ii/KKXeD4m7L/OTbz+Y7RfsMj5TdFadPnWm62Oy77Z9X/duDv61mBOIwm4zx4kBKB/h6hJEjzHSp3ZCrM+iyfNfm9nzq+jRq815w6/18bnJRexaOffbbDdNmhKefourHVXQFwB7yUmBCrSuK78joTTbGBJaXTTKXX5zfFWTkrrazFymhFs7pIQpytEPRDLeDp3i6Ke9hMMRSyv+QLX4BWz89V2yaz8Y4TcOU9/nXI0xloSgE1E1V5Kx4a9HtYSgsntdkPok9IbTGBDjL13t+LDajH3NMA0ny7bR8Y3hQdIwn31HpDEuAAYXTUuBuN1XNSiyAWmNnCzAtK7Q1q7RpSt1aeZFEqI9I2iMgYWkvJq5CpKERqn1al48dVWuc8w8i6pV2yqPZscLh7AVaWrWetL3gKU/IoVV4lO3G94MhjZup8ofavjnQoo4TftiZrbMGmSN6sx1vct04nBU/uW9oAQsoTBueV+e+XLjTQiudTVLbwwNSpK+YnZudvd6S6Jt+DjNIREcYlN12ubYRVxiZ/XEw3KCRAYIySQj/GfcPHfOjrP5MVhDh1zJPZsFRytx3a4oa3n7naGzSjLD+TLsw6yt/GlSKmoKwgrcUQT0o2ChBnEmBJQzosjVgzOO8v0Re3OVQjNoScI5M9nNqGyayoB8uUnzdY="
