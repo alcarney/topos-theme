@@ -19,11 +19,11 @@ Topos Theme
 
 .. |version| image:: https://img.shields.io/pypi/v/topos-theme.svg
     :alt: PyPI Package latest release
-    :target: https://pypi.python.org/pypi/topos-theme
+    :target: https://pypi.org/project/topos-theme
 
 .. |supported-versions| image:: https://img.shields.io/pypi/pyversions/topos-theme.svg
     :alt: Supported versions
-    :target: https://pypi.python.org/pypi/topos-theme
+    :target: https://pypi.org/project/topos-theme
 
 :code:`topos-theme` is a documentation theme for `sphinx`_ that was originally
 developed for the `topos`_ python package and has been extracted out into its own
