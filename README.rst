@@ -49,5 +49,17 @@ Finally rebuild your project and you should see that :code:`topos-theme` has tak
 effect.
 
 
+Supported Features
+------------------
+
+Because I'm a manic this theme is developed mostly from scratch as such not all
+features supported by Sphinx are supported by this theme yet. So here is a list
+keeping track of what has and has not been implemented:
+
+- [X] Math rendering via MathJax
+- [ ] Searching the Documentation
+- [ ] Responsive design
+
+
 .. _sphinx: http://www.sphinx-doc.org/en/master
 .. _topos: https://github.com/alcarney/topos
