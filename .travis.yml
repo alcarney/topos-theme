@@ -8,7 +8,7 @@ install:
     - "pipenv install -e ."
 
 script:
-    - "cd docs && make linkcheck && make html"
+    - "cd docs && make linkcheck && make html && cd .."
 
 deploy:
     provider: pypi
