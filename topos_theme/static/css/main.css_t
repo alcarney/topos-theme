@@ -1,7 +1,7 @@
 body {
-    background: #eee;
+    background: white;
     display: grid;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Nanum Myeongjo', serif;
     grid-template-areas:
         "header"
         "main"
@@ -9,42 +9,6 @@ body {
         "footer";
     grid-template-columns: auto;
     margin: 0;
-}
-
-@media (min-width: 1130px) {
-    body {
-        grid-template-areas:
-            "header header"
-            "main sidebar"
-            "footer footer";
-        grid-template-columns: auto 300px;
-        grid-template-rows: 75px auto 150px;
-    }
-
-    .nav-sections {
-        padding-right: 25px;
-    }
-
-    .nav-sections li {
-        float: left;
-        margin-bottom: 10px;
-        margin-left: 25px;
-    }
-
-    .nav {
-        padding-top: 30px
-    }
-
-    .header {
-        align-items: flex-end;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .footer {
-        border-top: 1px solid {{ theme_accent_color }};
-    }
-
 }
 
 a {
@@ -76,7 +40,6 @@ a:hover:before {
 
 .main {
     background: white;
-    box-shadow: 0 0 3px #888;
 }
 
 .header {
@@ -86,7 +49,12 @@ a:hover:before {
 }
 
 .nav-sections li {
-    list-style: none
+    list-style: none;
+    padding: 10px;
+}
+
+.current {
+    background: #eee;
 }
 
 .header sub {
@@ -117,7 +85,6 @@ a:hover:before {
 /* -- Main Content  -- */
 .section {
     padding-bottom: 20px;
-    line-height: 1.4;
 }
 
 .section h1,
@@ -154,7 +121,6 @@ a:hover:before {
 .nav {
     grid-area: sidebar;
     background: white;
-    border-left: 1px solid {{ theme_accent_color }};
 }
 
 .nav ul {
@@ -195,23 +161,30 @@ a:hover:before {
 
 /* -- Admonitions -- */
 .admonition {
-    border: 1px solid black;
-    border-left: 5px solid {{ theme_accent_color }};
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 25px 20px;
+    border: solid 1px #ddd;
 }
 
-.admonition-title {
-    margin-bottom: 15px;
+.admonition-title.first {
     font-size: 18px;
     font-weight: 800;
+    padding: 15px;
+    margin: 0;
+    margin-bottom: 15px;
+    background: #eee;
+    align-self: stretch;
+
+}
+
+.error .admonition-title {
+    background: #fee;
 }
 
 .admonition .last {
-    text-align: right;
-}
-
-.admonition.error {
-    border-left: 5px solid #cc0000;
+    margin: 0 15px;
 }
 
 .admonition code.literal span.pre {
@@ -219,10 +192,12 @@ a:hover:before {
 
 /* -- Inline Code -- */
 code.literal {
+    font-family: monospace;
+    padding: 2px;
+    background: #eee;
 }
 
 code.literal span.pre {
-    font-size: 16px;
 }
 
 /*-- Glossary -- */
@@ -380,4 +355,48 @@ td.linenos {
 
 div.linenodiv {
     margin-right: -5px;
+}
+
+/* -- Desktop Styles -- */
+@media (min-width: 1130px) {
+    body {
+        grid-template-areas:
+            "header header"
+            "sidebar main"
+            "footer footer";
+        grid-template-columns: 300px auto;
+        grid-template-rows: 75px auto 150px;
+    }
+
+    .nav-sections {
+        padding-right: 25px;
+    }
+
+    .nav-sections li {
+        float: left;
+        padding: 25px;
+    }
+
+    .nav {
+        padding-top: 30px
+    }
+
+    .header {
+        align-items: flex-end;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer {
+        border-top: 1px solid {{ theme_accent_color }};
+    }
+
+    .admonition {
+        flex-direction: row;
+    }
+
+    .admonition-title.first {
+        margin-bottom: 0;
+    }
+
 }
