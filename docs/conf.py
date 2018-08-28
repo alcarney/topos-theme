@@ -43,7 +43,8 @@ release = version
 # ones.
 extensions = [
     'sphinx.ext.todo',
-    'sphinx.ext.mathjax'
+    'sphinx.ext.mathjax',
+    'topos_theme'
 ]
 
 # Add any paths that contain templates here, relative to this directory.

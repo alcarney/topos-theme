@@ -43,6 +43,11 @@ then in your :code:`conf.py`
 
 .. code-block:: python
 
+   extensions = [
+       ...,
+       "topos_theme"
+   ]
+
    html_theme = "topos-theme"
 
 Finally rebuild your project and you should see that :code:`topos-theme` has taken
