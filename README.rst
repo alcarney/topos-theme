@@ -4,6 +4,8 @@ Topos Theme
 .. list-table::
     :stub-columns: 1
 
+    * - docs
+      - |docs|
     * - pypi
       - |version| |supported-versions|
 
@@ -13,8 +15,8 @@ Topos Theme
 .. |coveralls| image:: https://coveralls.io/repos/github/alcarney/topos/badge.svg?branch=dev
     :target: https://coveralls.io/github/alcarney/topos?branch=dev
 
-.. |docs| image:: https://readthedocs.org/projects/topos/badge/?version=latest
-    :target: http://topos.readthedocs.io/en/latest/?badge=latest
+.. |docs| image:: https://readthedocs.org/projects/topos-theme/badge/?version=latest
+    :target: https://topos-theme.readthedocs.io/en/latest/
     :alt: Documentation Status
 
 .. |version| image:: https://img.shields.io/pypi/v/topos-theme.svg
@@ -26,7 +28,7 @@ Topos Theme
     :target: https://pypi.org/project/topos-theme
 
 :code:`topos-theme` is a documentation theme for `sphinx`_ that was originally
-developed for the `topos`_ python package and has been extracted out into its own
+developed for the `topos <topos github>`_ python package and has been extracted out into its own
 independent distribution.
 
 Getting Started
@@ -65,6 +67,15 @@ keeping track of what has and has not been implemented:
 - [ ] Searching the Documentation
 - [ ] Responsive design
 
+Sites Using this Theme
+----------------------
+
+Here are some sites that are using this theme.
+
+- `topos`_
+- `stylo`_
 
 .. _sphinx: http://www.sphinx-doc.org/en/master
-.. _topos: https://github.com/alcarney/topos
+.. _topos github: https://github.com/alcarney/topos
+.. _topos: https://topos.readthedocs.io/en/latest/
+.. _stylo: https://alcarney.github.io/stylo/
