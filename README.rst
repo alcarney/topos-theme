@@ -28,7 +28,7 @@ Topos Theme
     :target: https://pypi.org/project/topos-theme
 
 :code:`topos-theme` is a documentation theme for `sphinx`_ that was originally
-developed for the `topos <topos github>`_ python package and has been extracted out into its own
+developed for the `topos`_ python package and has been extracted out into its own
 independent distribution.
 
 Getting Started
@@ -72,10 +72,10 @@ Sites Using this Theme
 
 Here are some sites that are using this theme.
 
-- `topos`_
+- `topos docs`_
 - `stylo`_
 
 .. _sphinx: http://www.sphinx-doc.org/en/master
-.. _topos github: https://github.com/alcarney/topos
-.. _topos: https://topos.readthedocs.io/en/latest/
+.. _topos: https://github.com/alcarney/topos
+.. _topos docs: https://topos.readthedocs.io/en/latest/
 .. _stylo: https://alcarney.github.io/stylo/

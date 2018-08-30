@@ -34,6 +34,16 @@ a:hover:before {
     width: 100%;
 }
 
+@keyframes bg-fade {
+    0%   {background: #ddd;}
+    100% {background: white;}
+}
+
+:target {
+    animation-name: bg-fade;
+    animation-duration: 4s;
+}
+
 #site-name:before {
     bottom: 20px;
 }
