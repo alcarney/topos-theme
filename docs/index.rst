@@ -1,9 +1,10 @@
 .. include:: ../README.rst
 
-Take the Tour
--------------
+Contents
+--------
 
 .. toctree::
    :maxdepth: 1
 
+   changes
    demo/index
