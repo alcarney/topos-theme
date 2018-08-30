@@ -34,6 +34,16 @@ a:hover:before {
     width: 100%;
 }
 
+@keyframes bg-fade {
+    0%   {background: #ddd;}
+    100% {background: white;}
+}
+
+:target {
+    animation-name: bg-fade;
+    animation-duration: 4s;
+}
+
 #site-name:before {
     bottom: 20px;
 }
@@ -90,7 +100,22 @@ a:hover:before {
 .section h1,
 .section h2,
 .section h3 {
+    position: relative;
+    overflow: hidden;
     padding: 10px;
+}
+
+.section h1:after,
+.section h2:after,
+.section h3:after {
+  content:'';
+  display:inline-block;
+  width:100%;
+  height:2px;
+  position: absolute;
+  top: 50%;
+  background: black;
+  margin-left: 25px;
 }
 
 .section h4,
@@ -187,17 +212,11 @@ a:hover:before {
     margin: 0 15px;
 }
 
-.admonition code.literal span.pre {
-}
-
 /* -- Inline Code -- */
 code.literal {
     font-family: monospace;
     padding: 2px;
     background: #eee;
-}
-
-code.literal span.pre {
 }
 
 /*-- Glossary -- */
@@ -331,6 +350,10 @@ tr.field {
     color: black;
 }
 
+.highlight pre {
+    overflow: auto;
+}
+
 .strike {
     text-decoration: line-through;
 }
@@ -385,6 +408,9 @@ div.linenodiv {
         align-items: flex-end;
         display: flex;
         justify-content: space-between;
+        position: sticky;
+        top: 0;
+        z-index: 1;
     }
 
     .footer {
