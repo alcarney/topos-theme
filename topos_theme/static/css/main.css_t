@@ -58,12 +58,16 @@ a:hover:before {
     grid-area: header;
 }
 
+.nav-sections ul {
+    padding-left: 0;
+}
+
 .nav-sections li {
     list-style: none;
     padding: 10px;
 }
 
-.current {
+.toctree-l1.current {
     background: #eee;
 }
 

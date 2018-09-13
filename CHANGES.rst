@@ -1,6 +1,15 @@
 Changelog
 =========
 
+v0.0.7 [Unreleased]
+-------------------
+
+Fixed
+^^^^^
+
+- The appropriate section is now highlighted on mobile
+- Figure captions are now centered
+
 v0.0.6 - 2018-08-30
 -------------------
 
