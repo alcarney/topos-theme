@@ -246,7 +246,7 @@ div.figure img {
 p.caption {
     margin: 0;
     padding: 5px;
-    text-align: right;
+    text-align: center;
     font-size: 10pt;
     font-style: italic;
 }
