@@ -385,14 +385,14 @@ div.linenodiv {
 }
 
 /* -- Desktop Styles -- */
-@media (min-width: 1130px) {
+@media (min-width: 1275px) {
     body {
         grid-template-areas:
             "header header"
             "sidebar main"
             "footer footer";
         grid-template-columns: 300px auto;
-        grid-template-rows: 75px auto 150px;
+        grid-template-rows: auto auto 150px;
     }
 
     .nav-sections {
