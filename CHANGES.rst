@@ -15,6 +15,12 @@ Changed
 - The link animation element on menu items has been moved to the :code:`<li>`
   element to be more consistent with the "selected menu item" styling.
 
+Fixed
+^^^^^
+
+- Fixed the link back to the homepage for projects that are hosted on some
+  subdomain.
+
 v0.0.7 - 2018-10-13
 -------------------
 
