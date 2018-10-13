@@ -1,6 +1,14 @@
 Changelog
 =========
 
+v0.0.9 - 2018-10-13
+-------------------
+
+Added
+^^^^^
+
+- Responsive menu for the mobile view
+
 v0.0.8 - 2018-10-13
 -------------------
 

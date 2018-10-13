@@ -41,6 +41,8 @@
 
         <div class="header">
             <a href="{{ pathto('index') }}" id="site-name"><h2>{{project}}<sub>v{{version}}</sub></h2></a>
+            <label class="menu-toggle" for="menu-toggle">Menu</label>
+            <input type="checkbox" id="menu-toggle">
             <div class="nav-sections">
                 {{ toctree(maxdepth=1) }}
             </div>
