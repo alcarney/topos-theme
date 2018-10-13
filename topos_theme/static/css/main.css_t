@@ -54,17 +54,21 @@ a:hover:before {
 
 .header {
     background: white;
-    border-bottom: 1px solid {{ theme_accent_color }};
+    box-shadow: 1px 1px 2px 2px #ddd;
     grid-area: header;
+}
+
+.nav-sections ul {
+    padding-left: 0;
 }
 
 .nav-sections li {
     list-style: none;
-    padding: 10px;
+    padding: 0 10px;
 }
 
-.current {
-    background: #eee;
+.toctree-l1.current {
+    border-left: solid 2px {{ theme_accent_color }};
 }
 
 .header sub {
@@ -246,7 +250,7 @@ div.figure img {
 p.caption {
     margin: 0;
     padding: 5px;
-    text-align: right;
+    text-align: center;
     font-size: 10pt;
     font-style: italic;
 }
@@ -380,16 +384,7 @@ div.linenodiv {
     margin-right: -5px;
 }
 
-/* -- Desktop Styles -- */
-@media (min-width: 1130px) {
-    body {
-        grid-template-areas:
-            "header header"
-            "sidebar main"
-            "footer footer";
-        grid-template-columns: 300px auto;
-        grid-template-rows: 75px auto 150px;
-    }
+@media (min-width: 800px) {
 
     .nav-sections {
         padding-right: 25px;
@@ -397,21 +392,48 @@ div.linenodiv {
 
     .nav-sections li {
         float: left;
-        padding: 25px;
     }
 
     .nav {
         padding-top: 30px
     }
 
+    .toctree-l1.current {
+        border-left: none;
+        border-bottom: solid 2px {{ theme_accent_color }};
+    }
+
+
     .header {
-        align-items: flex-end;
+        align-items: flex-start;
+        flex-direction: column;
         display: flex;
         justify-content: space-between;
         position: sticky;
         top: 0;
         z-index: 1;
     }
+
+}
+
+@media (min-width: 900px) {
+    .header {
+        flex-direction: row;
+        align-items: flex-end;
+    }
+}
+
+/* -- Desktop Styles -- */
+@media (min-width: 1275px) {
+    body {
+        grid-template-areas:
+            "header header"
+            "sidebar main"
+            "footer footer";
+        grid-template-columns: 300px auto;
+        grid-template-rows: auto auto 150px;
+    }
+
 
     .footer {
         border-top: 1px solid {{ theme_accent_color }};
