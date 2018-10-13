@@ -40,7 +40,7 @@
         {%- endmacro %}
 
         <div class="header">
-            <a href="/" id="site-name"><h2>{{project}}<sub>v{{version}}</sub></h2></a>
+            <a href="{{ pathto('index') }}" id="site-name"><h2>{{project}}<sub>v{{version}}</sub></h2></a>
             <div class="nav-sections">
                 {{ toctree(maxdepth=1) }}
             </div>
