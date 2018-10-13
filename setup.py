@@ -1,6 +1,12 @@
 from setuptools import setup
 from topos_theme import __version__
 
+
+def readme():
+    with open("README.rst") as f:
+        return f.read()
+
+
 setup(
     name="topos-theme",
     version=__version__,
@@ -9,6 +15,7 @@ setup(
     author="Alex Carney",
     author_email="alcarneyme@gmail.com",
     description="Topos theme for sphinx",
+    long_description=readme(),
     zip_safe=False,
     packages=['topos_theme'],
     package_data={'topos_theme': [
