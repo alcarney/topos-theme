@@ -75,6 +75,6 @@ which part of the Sphinx stack provides that directive.
 
 .. _docutils: http://docutils.sourceforge.net/
 .. _figure: http://docutils.sourceforge.net/docs/ref/rst/directives.html#figure
-.. _literal-include: http://www.sphinx-doc.org/en/stable/markup/code.html#directive-literalinclude
+.. _literal-include: http://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-literalinclude
 .. _image: http://docutils.sourceforge.net/docs/ref/rst/directives.html#image
 .. _sphinx: http://www.sphinx-doc.org/en/master/
