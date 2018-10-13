@@ -31,7 +31,8 @@ v0.0.6 - 2018-08-30
 
 - New "Fancy" section headers.
 - Site title now follows the user down the page in desktop view
-- Added a fade animation on the background colors of :code:`:target` so the user knows what it is
+- Added a fade animation on the background colors of :code:`:target` so the user
+  knows what it is
 
 - Fix for long code examples overflowing their borders
 

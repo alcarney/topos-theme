@@ -401,16 +401,16 @@ div.linenodiv {
         padding-top: 30px
     }
 
-    .toctree-l1.current {
+    .header .toctree-l1.current {
         border-left: none;
         border-bottom: solid 2px {{ theme_accent_color }};
     }
 
-    .toctree-l1 {
+    .header .toctree-l1 {
       position: relative;
     }
 
-    .toctree-l1:before {
+    .header .toctree-l1:before {
         background-color: {{ theme_accent_color }};
         bottom: -2px;
         content: "";
@@ -421,11 +421,11 @@ div.linenodiv {
         width: 0;
     }
 
-    .toctree-l1:hover:before {
+    .header .toctree-l1:hover:before {
         width: 100%;
     }
 
-    .toctree-l1.current:hover:before {
+    .header .toctree-l1.current:hover:before {
         width: 0;
     }
 
@@ -438,7 +438,6 @@ div.linenodiv {
         top: 0;
         z-index: 1;
     }
-
 }
 
 @media (min-width: 900px) {
