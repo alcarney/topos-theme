@@ -1,7 +1,29 @@
 Changelog
 =========
 
-v0.0.7 [Unreleased]
+v0.0.8 - 2018-10-13
+-------------------
+
+Added
+^^^^^
+
+- The project name and version is now included in the :code:`<title>` tag.
+
+Changed
+^^^^^^^
+
+- The link animation element on menu items has been moved to the :code:`<li>`
+  element to be more consistent with the "selected menu item" styling.
+
+Fixed
+^^^^^
+
+- Fixed the link back to the homepage for projects that are hosted on some
+  subdomain.
+- Implemented a potential fix for certain elements now resizing responsively on
+  mobile
+
+v0.0.7 - 2018-10-13
 -------------------
 
 Fixed
@@ -17,7 +39,8 @@ v0.0.6 - 2018-08-30
 
 - New "Fancy" section headers.
 - Site title now follows the user down the page in desktop view
-- Added a fade animation on the background colors of :code:`:target` so the user knows what it is
+- Added a fade animation on the background colors of :code:`:target` so the user
+  knows what it is
 
 - Fix for long code examples overflowing their borders
 

@@ -1,10 +1,10 @@
 .. include:: ../README.rst
 
-Contents
---------
+Index
+-----
 
 .. toctree::
    :maxdepth: 1
 
-   changes
    demo/index
+   changes

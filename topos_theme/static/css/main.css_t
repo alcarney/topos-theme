@@ -7,7 +7,7 @@ body {
         "main"
         "sidebar"
         "footer";
-    grid-template-columns: auto;
+    grid-template-columns: 100%;
     margin: 0;
 }
 
@@ -15,11 +15,11 @@ a {
     color: {{ theme_accent_color }};
     position: relative;
     text-decoration: none;
-    transition: 0.3s ease-in-out 0s;
-
 }
 
-a:before {
+.nav a:before,
+.content a:before,
+.footer a:before {
     background-color: {{ theme_accent_color }};
     bottom: 0;
     content: "";
@@ -30,7 +30,9 @@ a:before {
     width: 0;
 }
 
-a:hover:before {
+.nav a:hover:before,
+.content a:hover:before,
+.footer a:hover:before {
     width: 100%;
 }
 
@@ -64,7 +66,8 @@ a:hover:before {
 
 .nav-sections li {
     list-style: none;
-    padding: 0 10px;
+    padding: 10px;
+    margin-left: 5px;
 }
 
 .toctree-l1.current {
@@ -90,7 +93,7 @@ a:hover:before {
 .content {
     grid-area: main;
     margin-left: 15px;
-    margin-right: auto;
+    margin-right: 15px;
     margin-bottom: 20px;
     max-width: 800px;
     margin-bottom: 20px;
@@ -392,17 +395,41 @@ div.linenodiv {
 
     .nav-sections li {
         float: left;
+        padding: 0 10px;
+        margin-left: 0;
     }
 
     .nav {
         padding-top: 30px
     }
 
-    .toctree-l1.current {
+    .header .toctree-l1.current {
         border-left: none;
         border-bottom: solid 2px {{ theme_accent_color }};
     }
 
+    .header .toctree-l1 {
+      position: relative;
+    }
+
+    .header .toctree-l1:before {
+        background-color: {{ theme_accent_color }};
+        bottom: -2px;
+        content: "";
+        height: 2px;
+        left:0;
+        position: absolute;
+        transition: all 0.3s ease-in-out 0s;
+        width: 0;
+    }
+
+    .header .toctree-l1:hover:before {
+        width: 100%;
+    }
+
+    .header .toctree-l1.current:hover:before {
+        width: 0;
+    }
 
     .header {
         align-items: flex-start;
@@ -414,6 +441,13 @@ div.linenodiv {
         z-index: 1;
     }
 
+    .admonition {
+        flex-direction: row;
+    }
+
+    .admonition-title.first {
+        margin-bottom: 0;
+    }
 }
 
 @media (min-width: 900px) {
@@ -428,9 +462,9 @@ div.linenodiv {
     body {
         grid-template-areas:
             "header header"
-            "sidebar main"
+            "main sidebar"
             "footer footer";
-        grid-template-columns: 300px auto;
+        grid-template-columns: auto 300px;
         grid-template-rows: auto auto 150px;
     }
 
@@ -438,13 +472,4 @@ div.linenodiv {
     .footer {
         border-top: 1px solid {{ theme_accent_color }};
     }
-
-    .admonition {
-        flex-direction: row;
-    }
-
-    .admonition-title.first {
-        margin-bottom: 0;
-    }
-
 }
