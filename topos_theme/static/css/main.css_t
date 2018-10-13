@@ -54,7 +54,7 @@ a:hover:before {
 
 .header {
     background: white;
-    border-bottom: 1px solid {{ theme_accent_color }};
+    box-shadow: 1px 1px 2px 2px #ddd;
     grid-area: header;
 }
 
@@ -64,11 +64,11 @@ a:hover:before {
 
 .nav-sections li {
     list-style: none;
-    padding: 10px;
+    padding: 0 10px;
 }
 
 .toctree-l1.current {
-    background: #eee;
+    border-left: solid 2px {{ theme_accent_color }};
 }
 
 .header sub {
@@ -384,6 +384,45 @@ div.linenodiv {
     margin-right: -5px;
 }
 
+@media (min-width: 800px) {
+
+    .nav-sections {
+        padding-right: 25px;
+    }
+
+    .nav-sections li {
+        float: left;
+    }
+
+    .nav {
+        padding-top: 30px
+    }
+
+    .toctree-l1.current {
+        border-left: none;
+        border-bottom: solid 2px {{ theme_accent_color }};
+    }
+
+
+    .header {
+        align-items: flex-start;
+        flex-direction: column;
+        display: flex;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+}
+
+@media (min-width: 900px) {
+    .header {
+        flex-direction: row;
+        align-items: flex-end;
+    }
+}
+
 /* -- Desktop Styles -- */
 @media (min-width: 1275px) {
     body {
@@ -395,27 +434,6 @@ div.linenodiv {
         grid-template-rows: auto auto 150px;
     }
 
-    .nav-sections {
-        padding-right: 25px;
-    }
-
-    .nav-sections li {
-        float: left;
-        padding: 25px;
-    }
-
-    .nav {
-        padding-top: 30px
-    }
-
-    .header {
-        align-items: flex-end;
-        display: flex;
-        justify-content: space-between;
-        position: sticky;
-        top: 0;
-        z-index: 1;
-    }
 
     .footer {
         border-top: 1px solid {{ theme_accent_color }};
