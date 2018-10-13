@@ -9,6 +9,8 @@ Fixed
 
 - The appropriate section is now highlighted on mobile
 - Figure captions are now centered
+- Implemented a more compact menu design which should fix the disappearing menu
+  items issue on narrower screens.
 
 v0.0.6 - 2018-08-30
 -------------------
