@@ -1,7 +1,21 @@
 Changelog
 =========
 
-v0.0.7 [Unreleased]
+v0.0.8 [Unreleased]
+-------------------
+
+Added
+^^^^^
+
+- The project name and version is now included in the :code:`<title>` tag.
+
+Changed
+^^^^^^^
+
+- The link animation element on menu items has been moved to the :code:`<li>`
+  element to be more consistent with the "selected menu item" styling.
+
+v0.0.7 - 2018-10-13
 -------------------
 
 Fixed

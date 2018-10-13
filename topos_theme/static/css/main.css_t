@@ -15,11 +15,12 @@ a {
     color: {{ theme_accent_color }};
     position: relative;
     text-decoration: none;
-    transition: 0.3s ease-in-out 0s;
 
 }
 
-a:before {
+.nav a:before,
+.content a:before,
+.footer a:before {
     background-color: {{ theme_accent_color }};
     bottom: 0;
     content: "";
@@ -30,7 +31,9 @@ a:before {
     width: 0;
 }
 
-a:hover:before {
+.nav a:hover:before,
+.content a:hover:before,
+.footer a:hover:before {
     width: 100%;
 }
 
@@ -403,6 +406,28 @@ div.linenodiv {
         border-bottom: solid 2px {{ theme_accent_color }};
     }
 
+    .toctree-l1 {
+      position: relative;
+    }
+
+    .toctree-l1:before {
+        background-color: {{ theme_accent_color }};
+        bottom: -2px;
+        content: "";
+        height: 2px;
+        left:0;
+        position: absolute;
+        transition: all 0.3s ease-in-out 0s;
+        width: 0;
+    }
+
+    .toctree-l1:hover:before {
+        width: 100%;
+    }
+
+    .toctree-l1.current:hover:before {
+        width: 0;
+    }
 
     .header {
         align-items: flex-start;
