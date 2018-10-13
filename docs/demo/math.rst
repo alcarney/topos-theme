@@ -12,17 +12,20 @@ Inline Examples
 ---------------
 
 .. math-inline >>
+
 - One of the most famous equations ever is arguably :math:`E = mc^2`
 - Some say one if the most beautiful equations is Euler's formula
   :math:`e^{i\pi} = -1`
 - :math:`\mathbb{N}`, :math:`\mathbb{Z}`, :math:`\mathbb{Q}`, :math:`\mathbb{R}`
   and :math:`\mathbb{C}` represent the naturals, integers, rationals, reals and
   complex numbers respectively
+
 .. math-inline <<
 
 .. literalinclude:: math.rst
    :start-after: math-inline >>
    :end-before: math-inline <<
+
 
 Block Examples
 --------------

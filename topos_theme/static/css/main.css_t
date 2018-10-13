@@ -7,7 +7,7 @@ body {
         "main"
         "sidebar"
         "footer";
-    grid-template-columns: auto;
+    grid-template-columns: 100%;
     margin: 0;
 }
 
@@ -93,7 +93,7 @@ a {
 .content {
     grid-area: main;
     margin-left: 15px;
-    margin-right: auto;
+    margin-right: 15px;
     margin-bottom: 20px;
     max-width: 800px;
     margin-bottom: 20px;
@@ -440,6 +440,14 @@ div.linenodiv {
         top: 0;
         z-index: 1;
     }
+
+    .admonition {
+        flex-direction: row;
+    }
+
+    .admonition-title.first {
+        margin-bottom: 0;
+    }
 }
 
 @media (min-width: 900px) {
@@ -454,9 +462,9 @@ div.linenodiv {
     body {
         grid-template-areas:
             "header header"
-            "sidebar main"
+            "main sidebar"
             "footer footer";
-        grid-template-columns: 300px auto;
+        grid-template-columns: auto 300px;
         grid-template-rows: auto auto 150px;
     }
 
@@ -464,13 +472,4 @@ div.linenodiv {
     .footer {
         border-top: 1px solid {{ theme_accent_color }};
     }
-
-    .admonition {
-        flex-direction: row;
-    }
-
-    .admonition-title.first {
-        margin-bottom: 0;
-    }
-
 }

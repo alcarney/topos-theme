@@ -1,7 +1,7 @@
 Changelog
 =========
 
-v0.0.8 [Unreleased]
+v0.0.8 - 2018-10-13
 -------------------
 
 Added
@@ -20,6 +20,8 @@ Fixed
 
 - Fixed the link back to the homepage for projects that are hosted on some
   subdomain.
+- Implemented a potential fix for certain elements now resizing responsively on
+  mobile
 
 v0.0.7 - 2018-10-13
 -------------------
