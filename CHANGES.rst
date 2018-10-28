@@ -1,6 +1,16 @@
 Changelog
 =========
 
+
+v0.0.10 - 2018-10-28
+--------------------
+
+Fixed
+^^^^^
+
+- Images should finally be center aligned when asked to be.
+
+
 v0.0.9 - 2018-10-13
 -------------------
 
