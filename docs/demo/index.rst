@@ -4,8 +4,9 @@ Demo Pages
 .. toctree::
    :maxdepth: 1
 
-   basics
    admonitions
-   tables-and-figs
+   autodoc
+   basics
    code
    math
+   tables-and-figs
