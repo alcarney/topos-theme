@@ -242,8 +242,20 @@ a {
 
 }
 
-.error .admonition-title {
-    background: #fee;
+.danger .admonition-title,
+.error .admonition-title,
+.warning .admonition-title {
+    background: #fdd;
+}
+
+.caution .admonition-title,
+.admonition-todo .admonition-title {
+    background: #ffc;
+}
+
+.hint .admonition-title,
+.tip .admonition-title {
+    background: #dfd;
 }
 
 .admonition .last {
@@ -323,7 +335,7 @@ dl.class,
 dl.module,
 dl.function,
 dl.attribute {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 dl.class {
@@ -368,6 +380,11 @@ dl > dt > a {
     float: right;
 }
 
+table.field-list {
+    border: none;
+    margin: 20px 0;
+}
+
 tr.field {
     text-align: left;
 }
@@ -376,6 +393,11 @@ tr.field {
 .versionadded,
 .versionmodified {
     text-decoration: underline;
+}
+
+p.rubric {
+    font-weight: bold;
+    font-size: 16px;
 }
 
 /* -- Source Listinings -- */
@@ -394,6 +416,8 @@ tr.field {
 }
 
 .highlight pre {
+    font-family: 'Inconsolata', monospace;
+    font-size: 14px;
     overflow: auto;
 }
 
