@@ -1,6 +1,21 @@
 Changelog
 =========
 
+v0.0.11
+-------
+
+Added
+^^^^^
+
+- Example output from the autodoc extension
+- Font family and size is not set correctly for code examples.
+
+Changed
+^^^^^^^
+
+- Admonitions are now more colorful with errors, warnings and dangers being
+  coloured red. Cautions and todos are yellow and tips and hints being green.
+
 
 v0.0.10 - 2018-10-28
 --------------------
