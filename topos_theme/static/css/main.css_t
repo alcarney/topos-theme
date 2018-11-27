@@ -397,7 +397,6 @@ tr.field {
 
 p.rubric {
     font-weight: bold;
-    font-size: 16px;
 }
 
 /* -- Source Listinings -- */
