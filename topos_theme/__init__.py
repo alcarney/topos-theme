@@ -1,7 +1,7 @@
 from os import path
 
 
-__version__ = "0.0.10"
+__version__ = "0.0.11"
 
 
 def update_context(app, pagename, templatename, context, doctree):
