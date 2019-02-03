@@ -1,5 +1,4 @@
 body {
-    background: white;
     display: grid;
     font-family: 'Nanum Myeongjo', serif;
     grid-template-areas:
@@ -12,16 +11,18 @@ body {
 }
 
 a {
-    color: {{ theme_accent_color }};
     position: relative;
     text-decoration: none;
+}
+
+ol, ul {
+    padding-left: 15px;
 }
 
 .menu-toggle:before,
 .nav a:before,
 .content a:before,
 .footer a:before {
-    background-color: {{ theme_accent_color }};
     bottom: 0;
     content: "";
     height: 2px;
@@ -38,43 +39,25 @@ a {
     width: 100%;
 }
 
-@keyframes bg-fade {
-    0%   {background: #ddd;}
-    100% {background: white;}
-}
-
-:target {
-    animation-name: bg-fade;
-    animation-duration: 4s;
-}
 
 #site-name:before {
     bottom: 20px;
 }
 
-.main {
-    background: white;
-}
-
 .header {
-    background: white;
-    box-shadow: 1px 1px 2px 2px #ddd;
     grid-area: header;
 }
 
 .nav-sections {
-    background: white;
     position: absolute;
     transition: all 0.5s;
     transform: translateX(-150px);
     z-index: 99;
-    box-shadow: 2px 2px 1px 1px #ddd;
 }
 
 .menu-toggle {
     margin-left: 17px;
     position: relative;
-    color: {{ theme_accent_color }};
 }
 
 #menu-toggle {
@@ -101,19 +84,13 @@ a {
     margin-left: 5px;
 }
 
-.toctree-l1.current {
-    border-left: solid 2px {{ theme_accent_color }};
-}
-
 .header sub {
-    color: {{ theme_accent_color }};
     font-size: 10pt;
     margin-left: 5px;
 }
 
 .header h2 {
     margin: 0;
-    color: black;
     padding: 20px;
 }
 
@@ -136,36 +113,59 @@ a {
 }
 
 .section h1,
-.section h2,
-.section h3 {
+.section h2 {
     position: relative;
     overflow: hidden;
     padding: 10px;
 }
 
+.section h1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+}
+
+
 .section h1:after,
-.section h2:after,
-.section h3:after {
+.section h1:before {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    max-width: 20%;
+    height: 2px;
+}
+
+.section h1:after {
+    padding-left: 10px;
+}
+
+.section h1: before {
+    padding-right: 10px;
+}
+
+.section h2:after {
   content:'';
   display:inline-block;
   width:100%;
   height:2px;
   position: absolute;
   top: 50%;
-  background: black;
   margin-left: 25px;
 }
 
+.section h3,
 .section h4,
 .section h5,
 .section h6 {
-    margin: 25px 20px;
+    margin: 25px 10px;
 }
 
 .section ul,
 .section ol,
 .highlight {
-    margin: 10px 20px;
+    margin: 10px 10px;
 }
 
 .section li {
@@ -183,7 +183,6 @@ a {
 /* -- Sidebar -- */
 .nav {
     grid-area: sidebar;
-    background: white;
 }
 
 .nav ul {
@@ -203,23 +202,11 @@ a {
     padding: 5px 15px;
 }
 
-.nav .toctree-l1.current {
-}
-
-.nav .reference,
-.nav .toctree-l1 a,
-.nav .toctree-l2 a {
-}
-
 /* -- Footer -- */
 .footer {
     display: flex;
     justify-content: space-around;
     grid-area: footer;
-    background: white;
-}
-
-.footer a {
 }
 
 /* -- Admonitions -- */
@@ -228,7 +215,6 @@ a {
     flex-direction: column;
     align-items: center;
     margin: 25px 20px;
-    border: solid 1px #ddd;
 }
 
 .admonition-title.first {
@@ -237,25 +223,8 @@ a {
     padding: 15px;
     margin: 0;
     margin-bottom: 15px;
-    background: #eee;
     align-self: stretch;
 
-}
-
-.danger .admonition-title,
-.error .admonition-title,
-.warning .admonition-title {
-    background: #fdd;
-}
-
-.caution .admonition-title,
-.admonition-todo .admonition-title {
-    background: #ffc;
-}
-
-.hint .admonition-title,
-.tip .admonition-title {
-    background: #dfd;
 }
 
 .admonition .last {
@@ -266,7 +235,6 @@ a {
 code.literal {
     font-family: monospace;
     padding: 2px;
-    background: #eee;
 }
 
 /*-- Glossary -- */
@@ -286,7 +254,6 @@ div.figure {
 }
 
 div.figure img {
-    border: solid 1px #ddd;
     padding: 10px;
     display: block;
     margin-left: auto;
@@ -311,15 +278,6 @@ table {
     margin: 20px;
     border-style: solid;
     border-collapse: collapse;
-}
-
-thead {
-    border-bottom: solid 1px black;
-}
-
-tbody tr.row-odd {
-    border-top: solid 1px #ddd;
-    border-bottom: solid 1px #ddd;
 }
 
 tbody tr {
@@ -347,13 +305,11 @@ dl.function dt,
 dl.class dt {
     margin: 10px 0;
     margin-left: 10px;
-    border-bottom: solid 1px black;
 }
 
 dl.function em,
 dl.class em {
     font-style: normal;
-    color: {{ theme_accent_color }};
 }
 
 dl.function p,
@@ -368,12 +324,10 @@ dl.method > dt:before {
 
 dl.attribute > dt:before {
     content:"attribute ";
-    color: {{ theme_accent_color }};
 }
 
 dl.function > dt:before {
     content: "function ";
-    color: {{ theme_accent_color }};
 }
 
 dl > dt > a {
@@ -401,7 +355,6 @@ p.rubric {
 
 /* -- Source Listinings -- */
 .main > .highlight {
-    border-left: double 4px #666;
     margin: 20px;
     padding-left: 5px;
 }
@@ -409,9 +362,6 @@ p.rubric {
 .highlight,
 .highlight {
     padding-left: 5px;
-    border: 1px solid black;
-    border-left: 5px solid #5eba7d;
-    color: black;
 }
 
 .highlight pre {
@@ -427,8 +377,6 @@ p.rubric {
 /* -- With Line Numbers -- */
 
 table.highlighttable {
-    border: solid 1px black;
-    border-left: 5px solid #5eba7d;
     width: 95%;
 }
 
@@ -438,7 +386,6 @@ td.code div.highlight {
 }
 
 td.linenos {
-    border-right: solid 1px #ddd;
     text-align: center;
 }
 
@@ -472,17 +419,11 @@ div.linenodiv {
         padding-top: 30px
     }
 
-    .header .toctree-l1.current {
-        border-left: none;
-        border-bottom: solid 2px {{ theme_accent_color }};
-    }
-
     .header .toctree-l1 {
       position: relative;
     }
 
     .header .toctree-l1:before {
-        background-color: {{ theme_accent_color }};
         bottom: -2px;
         content: "";
         height: 2px;
@@ -535,10 +476,5 @@ div.linenodiv {
             "footer footer";
         grid-template-columns: auto 300px;
         grid-template-rows: auto auto 150px;
-    }
-
-
-    .footer {
-        border-top: 1px solid {{ theme_accent_color }};
     }
 }

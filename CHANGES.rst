@@ -1,8 +1,17 @@
 Changelog
 =========
 
-v0.0.11
--------
+v0.0.12 - 2019-02-03
+--------------------
+
+Changed
+^^^^^^^
+- Dropped the line from :code:`<h3>` tags
+- Made :code:`<h1>` tags centered
+- Code blocks now use the accent color defined in the theme's settings.
+
+v0.0.11 - 2018-11-27
+--------------------
 
 Added
 ^^^^^
