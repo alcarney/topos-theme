@@ -17,6 +17,10 @@ a {
     text-decoration: none;
 }
 
+ol, ul {
+    padding-left: 15px;
+}
+
 .menu-toggle:before,
 .nav a:before,
 .content a:before,
@@ -136,16 +140,40 @@ a {
 }
 
 .section h1,
-.section h2,
-.section h3 {
+.section h2 {
     position: relative;
     overflow: hidden;
     padding: 10px;
 }
 
+.section h1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+}
+
+
 .section h1:after,
-.section h2:after,
-.section h3:after {
+.section h1:before {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    max-width: 20%;
+    height: 2px;
+    background: black;
+}
+
+.section h1:after {
+    padding-left: 10px;
+}
+
+.section h1: before {
+    padding-right: 10px;
+}
+
+.section h2:after {
   content:'';
   display:inline-block;
   width:100%;
@@ -156,16 +184,17 @@ a {
   margin-left: 25px;
 }
 
+.section h3,
 .section h4,
 .section h5,
 .section h6 {
-    margin: 25px 20px;
+    margin: 25px 10px;
 }
 
 .section ul,
 .section ol,
 .highlight {
-    margin: 10px 20px;
+    margin: 10px 10px;
 }
 
 .section li {
