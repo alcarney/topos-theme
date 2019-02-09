@@ -1,6 +1,21 @@
 Changelog
 =========
 
+v0.0.13 - 2019-02-09
+--------------------
+
+Changed
+^^^^^^^
+
+- :code:`<h1>` tags now have a over and underline
+- Trying a new, cleaner layout
+
+Fixes
+^^^^^
+
+- In page elements should be more consistently aligned.
+- Alignment and color inconsistencies with :code:`autodoc` elements
+
 v0.0.12 - 2019-02-03
 --------------------
 

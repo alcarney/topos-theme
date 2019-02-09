@@ -302,9 +302,10 @@ dl.attribute {
     font-size: 14px;
 }
 
-dl.class {
-    margin-left: 25px;
-    margin-bottom: 75px;
+dl.class,
+dl.function {
+    margin-left: 20px;
+    margin-bottom: 50px;
 }
 
 dl.function dt,
@@ -325,7 +326,6 @@ dl.class p {
 
 dl.method > dt:before {
     content:"method ";
-    color: {{ theme_accent_color }};
 }
 
 dl.attribute > dt:before {

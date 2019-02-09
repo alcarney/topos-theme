@@ -112,10 +112,10 @@ dl.class dt {
     border-bottom: solid 1px black;
 }
 
-dl.function em
-dl.class em,
+dl.class > dt > em.property,
 dl.method > dt:before,
-dl.function > dt:before
+dl.function > dt:before,
+dl.attribute > dt:before
 {
     color: {{ theme_accent_color }};
 }
