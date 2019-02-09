@@ -46,6 +46,9 @@ ol, ul {
 
 .header {
     grid-area: header;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .nav-sections {
@@ -100,10 +103,8 @@ ol, ul {
 
 .content {
     grid-area: main;
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-bottom: 20px;
     max-width: 800px;
+    margin: auto;
     margin-bottom: 20px;
 }
 
@@ -115,34 +116,35 @@ ol, ul {
 .section h1,
 .section h2 {
     position: relative;
-    overflow: hidden;
     padding: 10px;
+}
+
+.section h2 {
+    overflow: hidden;
 }
 
 .section h1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: column;
     text-align: center;
-    width: 100%;
 }
 
-
 .section h1:after,
-.section h1:before {
+.section h1:before{
     content: '';
     display: inline-block;
     width: 100%;
-    max-width: 20%;
     height: 2px;
 }
 
 .section h1:after {
-    padding-left: 10px;
+    transform: translateY(5px);
 }
 
-.section h1: before {
-    padding-right: 10px;
+.section h1:before {
+    transform: translateY(-5px);
 }
 
 .section h2:after {
@@ -163,9 +165,12 @@ ol, ul {
 }
 
 .section ul,
-.section ol,
-.highlight {
+.section ol {
     margin: 10px 10px;
+}
+
+.highlight {
+    margin: 10px 20px;
 }
 
 .section li {
@@ -182,6 +187,7 @@ ol, ul {
 
 /* -- Sidebar -- */
 .nav {
+    display: none;
     grid-area: sidebar;
 }
 
@@ -446,9 +452,6 @@ div.linenodiv {
         flex-direction: column;
         display: flex;
         justify-content: space-between;
-        position: sticky;
-        top: 0;
-        z-index: 1;
     }
 
     .admonition {
@@ -472,7 +475,7 @@ div.linenodiv {
     body {
         grid-template-areas:
             "header header"
-            "main sidebar"
+            "main main"
             "footer footer";
         grid-template-columns: auto 300px;
         grid-template-rows: auto auto 150px;

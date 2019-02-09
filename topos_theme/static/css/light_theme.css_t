@@ -29,12 +29,11 @@ a {
 
 .header {
     background: white;
-    box-shadow: 1px 1px 2px 2px #ddd;
+    border-bottom: solid 1px {{ theme_accent_color }};
 }
 
 .nav-sections {
     background: white;
-    box-shadow: 2px 2px 1px 1px #ddd;
 }
 
 .menu-toggle {
@@ -142,6 +141,10 @@ td.linenos {
 
 
 @media (min-width: 800px) {
+    .header {
+        background: none;
+        border-bottom: none;
+    }
 
 }
 
@@ -158,5 +161,9 @@ td.linenos {
 
     .header .toctree-l1:before {
         background-color: {{ theme_accent_color }};
+    }
+
+    .nav-sections {
+        background: none;
     }
 }
