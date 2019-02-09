@@ -29,12 +29,11 @@ a {
 
 .header {
     background: white;
-    box-shadow: 1px 1px 2px 2px #ddd;
+    border-bottom: solid 1px {{ theme_accent_color }};
 }
 
 .nav-sections {
     background: white;
-    box-shadow: 2px 2px 1px 1px #ddd;
 }
 
 .menu-toggle {
@@ -113,10 +112,10 @@ dl.class dt {
     border-bottom: solid 1px black;
 }
 
-dl.function em
-dl.class em,
+dl.class > dt > em.property,
 dl.method > dt:before,
-dl.function > dt:before
+dl.function > dt:before,
+dl.attribute > dt:before
 {
     color: {{ theme_accent_color }};
 }
@@ -142,6 +141,10 @@ td.linenos {
 
 
 @media (min-width: 800px) {
+    .header {
+        background: none;
+        border-bottom: none;
+    }
 
 }
 
@@ -158,5 +161,9 @@ td.linenos {
 
     .header .toctree-l1:before {
         background-color: {{ theme_accent_color }};
+    }
+
+    .nav-sections {
+        background: none;
     }
 }
