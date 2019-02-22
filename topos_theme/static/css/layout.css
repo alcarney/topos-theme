@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+}
+/* -- Alignment -- */
+.align-cneter {
+    text-align: center;
+}
+
+/* -- Grid -- */
+.grid {
+    display: grid;
+    grid-template-areas:
+        "left content right"
+        "left footer right";
+    grid-template-columns: 25vw 50vw 25vw;
+    grid-template-rows: auto;
+    min-height: 100vh;
+}
+
+.left-sidebar {
+    grid-area: left;
+    height: 100%;
+}
+
+.right-sidebar {
+    right: 0;
+    grid-area: right;
+    height: 100%;
+}
+
+.sidebar {
+}
+
+.side-content {
+    text-align: center;
+    position: fixed;
+    width: 25vw;
+    top: 25vh;
+}
+
+.footer {
+    grid-area: footer;
+    text-align: center;
+}
+
+.content {
+    grid-area: content;
+    padding-top: 150px;
+}
+
+
+/* -- Element styles -- */
+body {
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+/* -- Menu -- */
+.menu ul {
+    padding: 0;
+    text-align: left;
+}
+
+.menu .toctree-l1,
+.menu .toctree-l2 {
+    list-style: none;
+}
+
+.menu .toctree-l1 ul {
+    display: none;
+}
+
+.menu .toctree-l1.current ul {
+    display: block;
+}
+
+.menu .toctree-l1 a,
+.menu .toctree-l2 a {
+    display: block;
+    margin: 10px 20px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.menu .toctree-l2 a {
+    margin: 10px 30px;
+}
+
+/* -- Content -- */
+
+.main {
+    margin-bottom: 150px;
+}
+
+.main h1,
+.main h2,
+.main h3,
+.main h4,
+.main h5,
+.main h6 {
+    margin: 0 20px;
+    margin-top: 15px;
+}
+
+.main p,
+.main ul,
+.main ol {
+    margin: 20px 30px;
+}
+
+.main .highlight {
+    margin: 20px 0;
+    padding: 30px;
+}
+
+.main h1 {
+    font-size: 32pt;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 75px;
+}
+
+.main h2 {
+    font-size: 28pt;
+    margin-bottom: 50px;
+}
+
+.main h3 {
+    font-size: 24pt;
+    margin-bottom: 30px;
+}
+
+.main h4 {
+    font-size: 20pt;
+    margin-bottom: 25px;
+}
+
+.main h5 {
+    font-size: 16pt;
+    margin-bottom: 20px;
+}
+
+.main h6 {
+    font-size: 12pt;
+    margin-bottom: 15px;
+}
+
+.main .headerlink {
+    font-size: 12pt;
+    display: none;
+}
+
+.main h2:hover > .headerlink,
+.main h3:hover > .headerlink,
+.main h4:hover > .headerlink,
+.main h5:hover > .headerlink,
+.main h6:hover > .headerlink {
+    display: inline-block;
+}
+
+#site-name {
+    text-decoration: none;
+}
+
+#site-name sub {
+    font-size: 10pt;
+    margin: 5px;
+}
+
+.search-bar {
+    width: 80%;
+    padding: 5px 10px;
+    text-align: center;
+}

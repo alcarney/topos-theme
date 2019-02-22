@@ -5,16 +5,11 @@ This page contains hello world like programs in many languages to demonstrate th
 highlighting style built into this theme. If your favourite language is not on this list
 then by all means open a pull request adding a small example!
 
-.. todo::
-
-   Allow users to choose their own style theme
-
 
 Haskell
 -------
 
 .. code-block:: haskell
-   :linenos:
 
    hello :: String -> String
    hello name = "Hello there " ++ name

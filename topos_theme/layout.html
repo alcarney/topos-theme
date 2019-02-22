@@ -8,9 +8,13 @@
         <link href="https://fonts.googleapis.com/css?family=Inconsolata|Nanum+Myeongjo" rel="stylesheet">
 
         <!-- TODO: Run CSS + JS through minifiers -->
-        <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" >
-        <link rel="stylesheet" href="{{ pathto('_static/css/light_theme.css', 1) }}" type="text/css" >
-        <link rel="stylesheet" href="{{ pathto('_static/css/highlight.css', 1) }} " type="text/css" >
+        <!--
+             <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" >
+             <link rel="stylesheet" href="{{ pathto('_static/css/light_theme.css', 1) }}" type="text/css" >
+             <link rel="stylesheet" href="{{ pathto('_static/css/highlight.css', 1) }} " type="text/css" >
+        -->
+        <link rel="stylesheet" href="{{ pathto('_static/css/layout.css', 1) }}" type="text/css">
+        <link rel="stylesheet" href="{{ pathto('_static/css/theme.css', 1) }}" type="text/css">
 
         <script type="text/javascript" id="documentation_options"
                 data-url_root="{{ pathto('', 1) }}"
@@ -23,7 +27,7 @@
 
         {% block extra_head %}{% endblock %}
     </head>
-    <body>
+    <body class="grid">
         <!-- Slightly modified from the basic theme in the Sphinx repository
         https://github.com/sphinx-doc/sphinx/blob/master/sphinx/themes/basic/layout.html -->
         {%- macro relbar() %}
@@ -40,29 +44,38 @@
           </ul>
         {%- endmacro %}
 
-        <div class="header">
-            <a href="{{ pathto('index') }}" id="site-name"><h2>{{project}}<sub>v{{version}}</sub></h2></a>
-            <label class="menu-toggle" for="menu-toggle">Menu</label>
-            <input type="checkbox" id="menu-toggle">
-            <div class="nav-sections">
-                {{ toctree(maxdepth=1) }}
+        <div class="left-sidebar fg-light bg-dark">
+            <div class="side-content">
+                <a href="{{ pathto('index') }}"
+                id="site-name"
+                class="fg-light"><h2>{{project}}<sub class="fg-accent">v{{version}}</sub></h2></a>
+                <form class="search" action="{{ pathto('search') }}" method="get">
+                    <input class="search-bar bg-dark" type="text" name="q" placeholder="Search"/>
+                    <input type="hidden" name="check_keywords" value="yes" />
+                    <input type="hidden" name="area" value="default" />
+                </form>
             </div>
         </div>
-        <div class="nav">
-            <div>
-                <h3 class="nav-header">Page Contents</h3>
-                {{toc}}
+
+        <div class="right-sidebar sidebar fg-light bg-dark">
+                <div class="side-content">
+                <div class="menu">
+                    {{ toctree(maxdepth=2, collapse=False) }}
+                </div>
+                <!--
+                    <div>
+                        <h3 class="nav-header">Page Contents</h3>
+                        {{toc}}
+                    </div>
+                -->
             </div>
-            <form class="search" action="{{ pathto('search') }}" method="get">
-                  <input type="text" name="q" placeholder="Search"/>
-                  <input type="hidden" name="check_keywords" value="yes" />
-                  <input type="hidden" name="area" value="default" />
-            </form>
         </div>
-        <div class="content">
+
+        <div class="content bg-light">
             {%- block body %} {%- endblock %}
         </div>
-        <div class="footer">
+
+        <footer class="footer bg-light">
 
             {% block extra_footer %}{% endblock %}
 
@@ -70,9 +83,9 @@
                 <p>Last updated on {{ last_updated }} </p>
             {%- endif %}
                 <p>
-                  Powered by <a href="http://www.sphinx-doc.org/">Sphinx</a> {{sphinx_version}} &amp;
+                  Built using <a href="http://www.sphinx-doc.org/">Sphinx</a> {{sphinx_version}} &amp;
                   <a href="https://github.com/alcarney/topos-theme">Topos Theme</a> {{topos_theme_version}}
                 </p>
-        </div>
+        </footer>
     </body>
 </html>
