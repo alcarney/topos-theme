@@ -157,6 +157,16 @@ body {
     display: inline-block;
 }
 
+p.admonition-title {
+    margin: 0;
+    padding: 15px;
+}
+
+div.admonition p.last {
+    margin: 0;
+    padding: 30px;
+}
+
 #site-name {
     text-decoration: none;
 }
