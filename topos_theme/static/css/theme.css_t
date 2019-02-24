@@ -15,6 +15,7 @@
 }
 
 .footer {
+     color: #888;
      border-top: solid 1px {{ theme_accent_color }};
 }
 
@@ -42,32 +43,23 @@
      color: white;
 }
 
+.main a,
+.footer a {
+     display: inline-block;
+     text-decoration: none;
+     color: {{ theme_accent_color }};
+     transition: transform 0.2s ease-out;
+}
+
+.main a:hover,
+.footer a:hover {
+     transform: translate(0px, -3px);
+     text-decoration: underline;
+}
+
 .main .headerlink {
      color: #888;
      text-decoration: none;
-}
-
-.main div[class^='highlight-'] {
-     color: white;
-     background: #444;
-     box-shadow: 1px 1px 2px 2px inset #222;
-}
-
-
-.main div.highlight-js:before {
-     content: 'javascript';
-}
-
-.main div.highlight-python:before {
-      content: 'python';
-}
-
-.main div[class^='highlight-']:before {
-     float: right;
-     font-weight: 600;
-     font-style: italic;
-     padding: 5px;
-     color: {{ theme_accent_color }};
 }
 
 .admonition {
@@ -117,4 +109,59 @@
 .admonition.hint .last,
 .admonition.tip .last {
     background: #242;
+}
+
+/* -- Code -- */
+.main div[class^='highlight-'] {
+     color: white;
+     background: #444;
+     box-shadow: 1px 1px 2px 2px inset #222;
+}
+
+{%- set language_map = [
+   ('haskell', 'haskell'),
+   ('java', 'java'),
+   ('js', 'javascript'),
+   ('json', 'json'),
+   ('python', 'python') ] %}
+
+{%- for short, name in language_map %}
+
+.main div.highlight-{{short}}:hover:before {
+     content: '{{name}}';
+}
+{% endfor %}
+
+.main div[class^='highlight-']:before {
+     float: right;
+     font-weight: 600;
+     font-style: italic;
+     padding: 5px;
+     color: {{ theme_accent_color }};
+}
+
+.main div[class^='highlight-']:hover span {
+     color: {{ theme_accent_color }};
+     text-shadow: 1px 1px 1px black;
+}
+
+.main div[class^='highlight-']:hover span.o,
+.main div[class^='highlight-']:hover span.ow,
+.main div[class^='highlight-']:hover span.p {
+     filter: brightness(100);
+}
+
+.main div[class^='highlight-']:hover span.n,
+.main div[class^='highlight-']:hover span.na,
+.main div[class^='highlight-']:hover span.nb,
+.main div[class^='highlight-']:hover span.nc,
+.main div[class^='highlight-']:hover span.nf,
+.main div[class^='highlight-']:hover span.nt,
+.main div[class^='highlight-']:hover span.nx {
+     filter: saturate(50%) brightness(150%);
+}
+
+.main div[class^='highlight-']:hover span.k,
+.main div[class^='highlight-']:hover span.kd {
+     filter: brightness(250%) saturate(150%);
 }

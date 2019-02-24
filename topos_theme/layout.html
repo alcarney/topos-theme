@@ -8,20 +8,18 @@
         <link href="https://fonts.googleapis.com/css?family=Inconsolata|Nanum+Myeongjo" rel="stylesheet">
 
         <!-- TODO: Run CSS + JS through minifiers -->
-        <!--
-             <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" >
-             <link rel="stylesheet" href="{{ pathto('_static/css/light_theme.css', 1) }}" type="text/css" >
-             <link rel="stylesheet" href="{{ pathto('_static/css/highlight.css', 1) }} " type="text/css" >
-        -->
         <link rel="stylesheet" href="{{ pathto('_static/css/layout.css', 1) }}" type="text/css">
         <link rel="stylesheet" href="{{ pathto('_static/css/theme.css', 1) }}" type="text/css">
 
         <script type="text/javascript" id="documentation_options"
                 data-url_root="{{ pathto('', 1) }}"
                 src="{{ pathto('_static/documentation_options.js', 1) }}"></script>
-        <script async
-                src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
-                type="application/javascript"></script>
+
+        {%- block scripts %}
+          {%- for script in script_files %}
+            {{ js_tag(script) }}
+          {% endfor %}
+        {%- endblock %}
 
         <title>{{ title | striptags }} - {{ project }} v{{ version }}</title>
 
@@ -81,6 +79,11 @@
 
             {%- if last_updated %}
                 <p>Last updated on {{ last_updated }} </p>
+            {%- endif %}
+            {%- if copyright %}
+                <p>
+                    © Copyright {{copyright}}
+                </p>
             {%- endif %}
                 <p>
                   Built using <a href="http://www.sphinx-doc.org/">Sphinx</a> {{sphinx_version}} &amp;

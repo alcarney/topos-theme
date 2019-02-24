@@ -41,6 +41,7 @@
 .footer {
     grid-area: footer;
     text-align: center;
+    padding: 20px;
 }
 
 .content {
