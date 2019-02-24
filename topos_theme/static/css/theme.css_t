@@ -111,6 +111,49 @@
     background: #242;
 }
 
+/* -- Autodoc -- */
+dl.class,
+dl.function {
+    border-top: solid 10px #222;
+    border-bottom: solid 10px #222;
+}
+
+dl.attribute > dt,
+dl.class > dt,
+dl.function > dt,
+dl.method > dt {
+    font-size: 12pt;
+    color: #888;
+}
+
+dl.attribute > dt > code.descname,
+dl.class > dt > code.descname,
+dl.function > dt > code.descname,
+dl.method > dt > code.descname {
+    font-size: 14pt;
+    color: black;
+}
+
+dl.class > dt > em.property,
+dl.function > dt:before,
+dl.method > dt:before,
+dl.attribute > dt:before {
+    color: {{ theme_accent_color }};
+    font-style: italic;
+}
+
+dl.function > dt:before {
+    content: 'function';
+}
+
+dl.method > dt:before {
+    content: 'method';
+}
+
+dl.attribute > dt:before {
+    content: 'attribute';
+}
+
 /* -- Code -- */
 .main div[class^='highlight-'] {
      color: white;
@@ -123,6 +166,7 @@
    ('java', 'java'),
    ('js', 'javascript'),
    ('json', 'json'),
+   ('pycon', 'python'),
    ('python', 'python') ] %}
 
 {%- for short, name in language_map %}
@@ -156,12 +200,23 @@
 .main div[class^='highlight-']:hover span.nb,
 .main div[class^='highlight-']:hover span.nc,
 .main div[class^='highlight-']:hover span.nf,
+.main div[class^='highlight-']:hover span.nn,
 .main div[class^='highlight-']:hover span.nt,
 .main div[class^='highlight-']:hover span.nx {
      filter: saturate(50%) brightness(150%);
 }
 
 .main div[class^='highlight-']:hover span.k,
-.main div[class^='highlight-']:hover span.kd {
+.main div[class^='highlight-']:hover span.kd,
+.main div[class^='highlight-']:hover span.kn {
      filter: brightness(250%) saturate(150%);
+}
+
+.main div[class^='highlight-']:hover span.gp,
+.main div[class^='highlight-']:hover span.go {
+     filter: saturate(0%) brightness(150%);
+}
+
+.main div[class^='highlight-']:hover span.mi {
+     filter: hue-rotate(60deg) brightness(200%);
 }
