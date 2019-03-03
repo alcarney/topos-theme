@@ -46,7 +46,7 @@
 
 .content {
     grid-area: content;
-    padding-top: 150px;
+    padding-top: 50px;
 }
 
 
@@ -130,32 +130,26 @@ body {
     font-size: 32pt;
     padding: 10px;
     text-align: center;
-    margin-bottom: 50px;
 }
 
 .main h2 {
-    font-size: 28pt;
-    margin-bottom: 30px;
+    font-size: 24pt;
 }
 
 .main h3 {
-    font-size: 24pt;
-    margin-bottom: 30px;
+    font-size: 18pt;
 }
 
 .main h4 {
-    font-size: 20pt;
-    margin-bottom: 25px;
+    font-size: 16pt;
 }
 
 .main h5 {
-    font-size: 16pt;
-    margin-bottom: 20px;
+    font-size: 14pt;
 }
 
 .main h6 {
     font-size: 12pt;
-    margin-bottom: 15px;
 }
 
 .main .headerlink {
@@ -199,10 +193,44 @@ div.admonition p.last {
     margin: 5px;
 }
 
+/* -- Search -- */
+
 .search-bar {
     width: 80%;
     padding: 5px 10px;
     text-align: center;
+}
+
+.main form {
+    margin: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main form input[type='text'] {
+    width: 100%;
+    margin-right: 10px;
+}
+
+.main form input[type='submit'] {
+    text-transform: capitalize;
+}
+
+.main ul.search {
+    margin: 0;
+}
+
+.main ul.search li {
+    list-style: none;
+    padding: 20px 30px;
+}
+
+.main ul.search li a {
+    font-size: 20pt;
+}
+
+.main ul.search li .context {
+    margin: 10px;
 }
 
 /* -- Autodoc -- */
@@ -225,22 +253,6 @@ table.field-list {
     text-align: left;
 }
 
-/* -- Search -- */
-.main form {
-    margin: 30px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.main form input[type='text'] {
-    width: 100%;
-    margin-right: 10px;
-}
-
-.main form input[type='submit'] {
-    text-transform: capitalize;
-}
-
 /* -- Figures --*/
 .main .figure {
     padding: 20px 0;
@@ -251,4 +263,37 @@ table.field-list {
     font-style: italic;
     margin: 0 30px;
     text-align: right;
+}
+
+/* -- Responsiveness -- */
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-areas:
+            "left"
+            "right"
+            "content"
+            "footer";
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+
+    .side-content {
+        width: 100%;
+        position: unset;
+    }
+
+    .left-sidebar {
+        width: 100%;
+        height: 10vh;
+        position: fixed;
+        top: 0;
+    }
+
+    .left-sidebar .side-content{
+        padding: 20px 0;
+    }
+
+    .right-sidebar {
+        margin-top: 10vh;
+    }
 }

@@ -48,11 +48,32 @@
       color: white;
 }
 
+.menu .toctree-l1 > a:after {
+      font-family: FontAwesome;
+      content: '\f0dd';
+      position: absolute;
+      right: 25px;
+      transform: rotate(-90deg);
+}
+
+.menu .toctree-l1 > a.current:after {
+      transform: none;
+}
+
+/* -- Search -- */
 .search-bar {
      border-radius: 10px;
      border-width: 2px;
      border-style: solid;
      color: white;
+}
+
+.main ul.search li {
+    border-top: solid 5px #222;
+}
+
+.main ul.search li .highlighted {
+    color: {{ theme_accent_color }};
 }
 
 .main h2 {
