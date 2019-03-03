@@ -1,47 +1,36 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{%- extends "basic/layout.html"  %}
 
-        <link href="https://fonts.googleapis.com/css?family=Inconsolata|Nanum+Myeongjo" rel="stylesheet">
+{% block css %}
+{#
+  Modified version of the css() macro from the basic theme that doesn't
+  the include pygments css file
+#}
+<link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />
+<link rel="stylesheet" href="{{ pathto('_static/css/theme.css', 1) }}" type="text/css" />
 
-        <!-- TODO: Run CSS + JS through minifiers -->
-        <link rel="stylesheet" href="{{ pathto('_static/css/layout.css', 1) }}" type="text/css">
-        <link rel="stylesheet" href="{{ pathto('_static/css/theme.css', 1) }}" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
 
-        <script type="text/javascript" id="documentation_options"
-                data-url_root="{{ pathto('', 1) }}"
-                src="{{ pathto('_static/documentation_options.js', 1) }}"></script>
+{%- for css in css_files %}
+    {%- if css|attr("filename") %}
+      {{ css_tag(css) }}
+    {%- else %}
+      <link rel="stylesheet" href="{{ pathto(css, 1) }}" type="text/css" />
+    {%- endif %}
+{%- endfor %}
 
-        {%- block scripts %}
-          {%- for script in script_files %}
-            {{ js_tag(script) }}
-          {% endfor %}
-        {%- endblock %}
+{% endblock %}
 
-        <title>{{ title | striptags }} - {{ project }} v{{ version }}</title>
+{% block htmltitle %}
+  <title>{{ title | striptags | e}} | {{project}} v{{version}}</title>
+{% endblock %}
 
-        {% block extra_head %}{% endblock %}
-    </head>
-    <body class="grid">
-        <!-- Slightly modified from the basic theme in the Sphinx repository
-        https://github.com/sphinx-doc/sphinx/blob/master/sphinx/themes/basic/layout.html -->
-        {%- macro relbar() %}
-          <ul>
-            {%- block rootrellink %}
-            <li class="nav-item nav-item-0"><a href="{{ pathto(master_doc) }}">{{ shorttitle|e }}</a>{{ reldelim1 }}</li>
-            {%- endblock %}
-            {%- for parent in parents %}
-              <li class="nav-item nav-item-{{ loop.index }}">
-                  <a href="{{ parent.link|e }}" {% if loop.last %}{{ accesskey("U") }}{% endif %}>{{ parent.title }}</a>
-                  {{ reldelim1 }}</li>
-            {%- endfor %}
-            {%- block relbaritems %} {% endblock %}
-          </ul>
-        {%- endmacro %}
+{% block body_tag %}<body class="grid">{% endblock %}
 
+{# Disable the built-in navbars #}
+{% block relbar1 %}{% endblock %}
+{% block relbar2 %}{% endblock %}
+
+{% block header %}
         <div class="left-sidebar fg-light bg-dark">
             <div class="side-content">
                 <a href="{{ pathto('index') }}"
@@ -60,35 +49,14 @@
                 <div class="menu">
                     {{ toctree(maxdepth=2, collapse=False) }}
                 </div>
-                <!--
-                    <div>
-                        <h3 class="nav-header">Page Contents</h3>
-                        {{toc}}
-                    </div>
-                -->
             </div>
         </div>
+{% endblock %}
 
+{%- block content %}
         <div class="content bg-light">
-            {%- block body %} {%- endblock %}
+            <div class="main">
+                {% block body %} {% endblock %}
+            </div>
         </div>
-
-        <footer class="footer bg-light">
-
-            {% block extra_footer %}{% endblock %}
-
-            {%- if last_updated %}
-                <p>Last updated on {{ last_updated }} </p>
-            {%- endif %}
-            {%- if copyright %}
-                <p>
-                    © Copyright {{copyright}}
-                </p>
-            {%- endif %}
-                <p>
-                  Built using <a href="http://www.sphinx-doc.org/">Sphinx</a> {{sphinx_version}} &amp;
-                  <a href="https://github.com/alcarney/topos-theme">Topos Theme</a> {{topos_theme_version}}
-                </p>
-        </footer>
-    </body>
-</html>
+{%- endblock %}

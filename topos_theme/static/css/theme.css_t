@@ -55,6 +55,10 @@
      color: white;
 }
 
+.main h2 {
+    border-top: 10px solid #222;
+}
+
 .main a,
 .footer a {
      display: inline-block;
@@ -127,7 +131,6 @@
 dl.class,
 dl.function {
     border-top: solid 10px #222;
-    border-bottom: solid 10px #222;
 }
 
 dl.attribute > dt,
@@ -167,9 +170,23 @@ dl.attribute > dt:before {
 }
 
 /* -- Tables -- */
+table, th, td {
+    border-color: #ddd;
+}
+
 table.field-list {
     border-top: solid 1px #ddd;
     border-bottom: solid 1px #ddd;
+}
+
+/* -- Figures -- */
+.main .figure {
+    border-top: solid 1px #222;
+    border-bottom: solid 1px #222;
+}
+
+.main .figure .caption {
+    color: #888;
 }
 
 /* -- Code -- */
