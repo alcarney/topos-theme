@@ -81,6 +81,7 @@ body {
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease-out;
+    font-size: 12pt;
 }
 
 .menu .toctree-l2 a {
@@ -132,6 +133,7 @@ body {
     text-align: center;
 }
 
+.side-content h2,
 .main h2 {
     font-size: 24pt;
 }
