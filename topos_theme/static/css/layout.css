@@ -199,10 +199,44 @@ div.admonition p.last {
     margin: 5px;
 }
 
+/* -- Search -- */
+
 .search-bar {
     width: 80%;
     padding: 5px 10px;
     text-align: center;
+}
+
+.main form {
+    margin: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main form input[type='text'] {
+    width: 100%;
+    margin-right: 10px;
+}
+
+.main form input[type='submit'] {
+    text-transform: capitalize;
+}
+
+.main ul.search {
+    margin: 0;
+}
+
+.main ul.search li {
+    list-style: none;
+    padding: 20px 30px;
+}
+
+.main ul.search li a {
+    font-size: 20pt;
+}
+
+.main ul.search li .context {
+    margin: 10px;
 }
 
 /* -- Autodoc -- */
@@ -223,22 +257,6 @@ table.docutils {
 
 table.field-list {
     text-align: left;
-}
-
-/* -- Search -- */
-.main form {
-    margin: 30px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.main form input[type='text'] {
-    width: 100%;
-    margin-right: 10px;
-}
-
-.main form input[type='submit'] {
-    text-transform: capitalize;
 }
 
 /* -- Figures --*/
