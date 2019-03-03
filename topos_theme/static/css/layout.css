@@ -76,14 +76,23 @@ body {
 
 .menu .toctree-l1 a,
 .menu .toctree-l2 a {
-    display: block;
+    display: inline-block;
     margin: 10px 20px;
     text-decoration: none;
     font-weight: 600;
+    transition: all 0.3s ease-out;
 }
 
 .menu .toctree-l2 a {
     margin: 10px 30px;
+}
+
+.menu .toctree-l1 a:hover {
+    margin-left: 30px;
+}
+
+.menu .toctree-l2 a:hover {
+    margin-left: 40px;
 }
 
 /* -- Content -- */
@@ -158,6 +167,11 @@ body {
     display: inline-block;
 }
 
+.main img {
+    width: 100%;
+    margin: auto;
+}
+
 p.admonition-title {
     margin: 0;
     padding: 15px;
@@ -194,13 +208,15 @@ dl.function {
 }
 
 /* -- Tables -- */
+table.docutils {
+    border-collapse: collapse;
+    max-width: 45vw;
+    margin:  15px auto;
+}
+
 table.field-list {
     width: 100%;
-    margin:  15px auto;
     text-align: left;
-    border-collapse: collapse;
-    border-top: solid 1px #ddd;
-    border-bottom: solid 1px #ddd;
 }
 
 table.field-list th.field-name {
