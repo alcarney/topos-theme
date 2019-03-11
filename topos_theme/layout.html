@@ -25,7 +25,11 @@
 {% endblock %}
 
 {% block htmltitle %}
-  <title>{{ title | striptags | e}} | {{project}} v{{version}}</title>
+<title>{{ title | striptags | e}} | {{project}} v{{version}}</title>
+{% endblock %}
+
+{% block extrahead %}
+<meta name="theme-color" content="#222">
 {% endblock %}
 
 {% block body_tag %}<body class="grid">{% endblock %}
