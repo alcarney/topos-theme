@@ -34,7 +34,7 @@
     text-align: center;
     position: fixed;
     width: 25vw;
-    top: 25vh;
+    top: 5vh;
 }
 
 .footer {
@@ -130,6 +130,7 @@ p, a, li {
     padding: 30px;
     font-family: monospace;
     font-size: 12pt;
+    overflow-x: auto;
 }
 
 .main h1 {
