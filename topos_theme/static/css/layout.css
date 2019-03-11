@@ -54,8 +54,8 @@ body {
     font-family: 'Lora', serif;
 }
 
-a {
-    font-size: 12pt;
+p, a, li {
+    font-size: 14pt;
 }
 
 /* -- Menu -- */
@@ -156,11 +156,11 @@ a {
 }
 
 .main h6 {
-    font-size: 12pt;
+    font-size: 14pt;
 }
 
 .main .headerlink {
-    font-size: 12pt;
+    font-size: 14pt;
     display: none;
 }
 
