@@ -54,6 +54,10 @@ body {
     font-family: 'Lora', serif;
 }
 
+a {
+    font-size: 12pt;
+}
+
 /* -- Menu -- */
 .menu ul {
     padding: 0;
