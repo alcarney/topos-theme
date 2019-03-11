@@ -272,6 +272,11 @@ table.field-list {
     text-align: right;
 }
 
+/* -- RTD -- */
+div.rst-versions {
+    font-size: 14pt;
+}
+
 /* -- Responsiveness -- */
 @media (max-width: 1024px) {
     .grid {
