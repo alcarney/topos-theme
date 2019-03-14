@@ -1,6 +1,20 @@
 Changelog
 =========
 
+v0.0.14 - 2019-03-11
+--------------------
+
+Added
+^^^^^
+
+- Search now works!
+
+Changed
+^^^^^^^
+
+- A whole new layout (again) hopefully this one is a keeper.
+- The theme is now properly based on the :code:`basic` Sphinx theme.
+
 v0.0.13 - 2019-02-09
 --------------------
 
