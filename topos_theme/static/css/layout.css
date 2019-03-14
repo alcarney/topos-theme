@@ -55,7 +55,7 @@ body {
 }
 
 p, a, li {
-    font-size: 14pt;
+    font-size: 12pt;
 }
 
 /* -- Menu -- */
@@ -84,7 +84,7 @@ p, a, li {
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease-out;
-    font-size: 14pt;
+    font-size: 12pt;
 }
 
 .menu .toctree-l2 a {
@@ -129,7 +129,7 @@ p, a, li {
     margin: 20px 0;
     padding: 30px;
     font-family: monospace;
-    font-size: 12pt;
+    font-size: 10pt;
     overflow-x: auto;
 }
 
@@ -161,7 +161,7 @@ p, a, li {
 }
 
 .main .headerlink {
-    font-size: 14pt;
+    font-size: 12pt;
     display: none;
 }
 
